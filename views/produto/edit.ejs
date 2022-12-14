@@ -1,0 +1,41 @@
+<%- include('../partials/header') %>
+<%- include('../partials/navbar') %>
+
+<style>
+    .container{
+        border-radius: 10px;        
+        box-shadow: 10px 5px 5px#201b2c;
+        background: #fff;
+    }
+    h2{
+        text-align: center;
+        color: #201b2c;
+        padding-top: 2mm;
+        padding-bottom: 2mm;
+    }   
+</style>
+
+<body>
+    <div class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col-md-9 mx-auto col-lg-5 col-sm-10 col-xs-12">
+                
+                <div class="form-group mb-10">
+                    <form action="/produto/<%=produtos.id%>?_method=PATCH" method="POST">
+                        <h2 class="mb-2">Atualização de <%= produtos.nome %> </h2>
+                        
+                        <label for="quantidade">Quantidade: </label>
+                        <textarea class="form-control" rows="4" name="quantidade"><%= produtos.quantidade %></textarea>
+
+                        <label for="localArmazenado">Local Armazenado: </label>
+                        <textarea class="form-control"  rows="4"  name="localArmazenado"><%= produtos.localArmazenado %> </textarea>
+                    
+                        <button class="btn btn-lg btn-block">Salvar</button>
+                    </form>
+                    <a href="/produto">Voltar</a>
+                </div>
+            </div>
+        </div>
+    </div>  
+</body>
+<%- include('../partials/footer') %>

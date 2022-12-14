@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/css/index.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/css/hub.css'>
+    <script src="/js/apagaPerfil.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+
+<body>
+    <div class="main-login">
+        <div class="perfil">
+            <h1> Seja bem-vindo ao seu perfil <%= usuario.nome %>, <%= usuario.funcao %></h1>
+        </div>
+        <div class="centralizar">
+
+            <a href='' class="botao" onclick="apagaPerfil(<%=usuario.id%>)" style="background-color:#4e9af1">Excluir perfil </a>
+            <a href="/usuario/cadastrados" class="botao" style="background-color:#f14ec0">Gerenciar Funcionarios</a>
+            <a href="/usuario/perfil/MudarSenha" class="botao" style="background-color:#ff0505">Mudar senha</a>
+        </div>
+    </div>
+    
+
+
+</body>
+</html>

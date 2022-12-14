@@ -1,0 +1,59 @@
+<%- include('../partials/header') %>
+<%- include('../partials/navbar') %>
+
+<style>
+    .form-container{
+        border-radius: 10px;        
+        box-shadow: 0px-0px-10px-0px;
+        background: #fff;
+    }
+    h1,h3{
+        text-align: center;
+        color: #201b2c;
+    }
+</style>
+
+<body>
+    <div class="container-fluid mt-5">
+        <div class="row align-items-center">
+            <div class="col-md-10 mx-auto col-lg-5">
+                <form class="form-container p-4 p-md-5 border rounded-3" action="/produto" method="POST">
+                    <h1 class="mb-2">  Capivara Market</h1>
+                    <h3 class="mb-4"> Cadastrar Novo Produto </h3>
+                    <div class="form-group mb-10">
+                        <label for="nome">Nome: </label>
+                        <input type="text" class="form-control" name="nome">
+                    </div>
+                    <div class="form-group mb-10">
+                        <label for="quantidade">Quantidade: </label>
+                        <input type="text" class="form-control" name="quantidade">
+                    </div>
+                    <div class="form-group mb-10">
+                        <label for="localArmazenado">Local Armazenado: </label>
+                        <input type="text" class="form-control" name="localArmazenado">
+                    </div>
+                    <div class="form-group mb-10">
+                        <label for="formaArmazenado">Forma de Armazenamento: </label>
+                        <input type="text" class="form-control" name="formaArmazenado">
+                    </div>
+                    <div class="form-group mb-10">
+                        <label for="preco">Preço: </label>
+                        <input type="text" class="form-control" name="preco">
+                    </div>
+                    <div class="form-group mb-10">
+                        <label for="fornecedor">Fornecedor: </label>
+                        <input type="text" class="form-control" name="fornecedor">
+                    </div>
+                    <div class="form-group mb-10">
+                        <label for="preco">Preço Bruto: </label>
+                        <input type="text" class="form-control" name="precoBruto">
+                    </div>                    
+                    <button class="btn btn-lg btn-block">Enviar</button>
+                    <a href="/produto">Voltar</a>
+                </form>
+            </div>
+        </div>
+    </div>    
+</body>
+
+<%- include('../partials/footer') %>

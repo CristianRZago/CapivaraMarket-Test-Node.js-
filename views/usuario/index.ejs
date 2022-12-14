@@ -1,0 +1,36 @@
+<%- include('../partials/header') %>
+<%- include('../partials/navbar') %>
+
+<style>
+    .container{
+        border-radius: 10px;        
+        box-shadow: 10px 5px 5px#201b2c;
+        background: #fff;
+    }
+    h1{
+        text-align: center;
+        color: #fff;
+        padding-top: 2mm;
+        padding-bottom: 2mm;
+    }  
+    body{
+        color: #fff !important;;
+    }
+</style>
+
+<body>
+    <h1>Funcionario Cadastrados</h1>
+    <ul>
+        <% for(let funcionario of usuarios) { %>
+            <li>
+                <p>ID do Funcionario: <%=funcionario.id%> </p>
+                <p>Nome: <%=funcionario.nome%></p>
+                <p>Função: <%=funcionario.funcao%></p>
+                <p>Endereço: <%=funcionario.endereco%></p>
+                <a href='/usuario/edit/<%=funcionario.id%>' >Editar Funcionario</a><br>
+            </li>
+        <% } %>
+    </ul>
+    <a href="/usuario/novo/">Cadastrar novo funcionario</a>
+</body>
+</html>
